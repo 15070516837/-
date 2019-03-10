@@ -10,7 +10,7 @@ import com.yrh.jdbc.dao.impl.StudentDaoImpl;
 import com.yrh.jdbc.domain.Student;
 
 public class StudentDaoTest {
-//aaa
+//aaa+bbb
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
