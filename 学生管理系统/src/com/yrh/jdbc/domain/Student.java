@@ -1,4 +1,5 @@
 package com.yrh.jdbc.domain;
+//abc 我修改的代码
 
 public class Student {
 	Integer sno;
