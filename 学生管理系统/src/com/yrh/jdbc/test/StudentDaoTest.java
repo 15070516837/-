@@ -10,51 +10,51 @@ import com.yrh.jdbc.dao.impl.StudentDaoImpl;
 import com.yrh.jdbc.domain.Student;
 
 public class StudentDaoTest {
-
+//bbb
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		IStudentDao dao = new StudentDaoImpl();// »ñÈ¡½Ó¿Ú¶ÔÏó
+		IStudentDao dao = new StudentDaoImpl();// è·å–æ¥å£å¯¹è±¡
 		Manager man = new Manager(scan,dao);
-		List<Student> studentAll = dao.getAll();// »ñÈ¡Êı¾İ¿âµÄËùÒÔµÄÑ§ÉúÊı¾İ
-		man.display(studentAll);// ÏÔÊ¾ËùÒÔÊı¾İ
+		List<Student> studentAll = dao.getAll();// è·å–æ•°æ®åº“çš„æ‰€ä»¥çš„å­¦ç”Ÿæ•°æ®
+		man.display(studentAll);// æ˜¾ç¤ºæ‰€ä»¥æ•°æ®
 		while (true) {
-			System.out.println("1.ĞÂÔöÑ§Éú");
-			System.out.println("2.ĞŞ¸ÄĞÅÏ¢");
-			System.out.println("3.É¾³ıÑ§Éú");
-			System.out.println("4.½µĞò²é¿´");
-			System.out.println("5.ÍË³ö");
-			System.out.println("ÇëÊäÈë¶ÔÓ¦²Ù×÷");
+			System.out.println("1.æ–°å¢å­¦ç”Ÿ");
+			System.out.println("2.ä¿®æ”¹ä¿¡æ¯");
+			System.out.println("3.åˆ é™¤å­¦ç”Ÿ");
+			System.out.println("4.é™åºæŸ¥çœ‹");
+			System.out.println("5.é€€å‡º");
+			System.out.println("è¯·è¾“å…¥å¯¹åº”æ“ä½œ");
 			int exe = scan.nextInt();
 			if (exe == 1) {
 				Student stu = man.setStudent();
-				// ½«Ñ§ÉúĞÅÏ¢ÌîĞ´µ½Êı¾İ¿â
+				// å°†å­¦ç”Ÿä¿¡æ¯å¡«å†™åˆ°æ•°æ®åº“
 				dao.save(stu);
-				man.display(dao.getAll());// ÏÔÊ¾ËùÒÔÊı¾İ
+				man.display(dao.getAll());// æ˜¾ç¤ºæ‰€ä»¥æ•°æ®
 			} else if (exe == 2) {
-				System.out.println("ÇëÊäÈëÄúÒªĞŞ¸ÄµÄÑ§Éú±àºÅ");
+				System.out.println("è¯·è¾“å…¥æ‚¨è¦ä¿®æ”¹çš„å­¦ç”Ÿç¼–å·");
 				int index = scan.nextInt();
-				// ÏÔÊ¾ÒªĞŞ¸ÄµÄÑ§ÉúĞÅÏ¢
+				// æ˜¾ç¤ºè¦ä¿®æ”¹çš„å­¦ç”Ÿä¿¡æ¯
 				Student stu = dao.get(index);
 				man.display(stu);
 				Student stu1 = man.setStudent();
 
-				// ½«ĞŞ¸ÄÊı¾İ¿âµÄÑ§ÉúĞÅÏ¢
+				// å°†ä¿®æ”¹æ•°æ®åº“çš„å­¦ç”Ÿä¿¡æ¯
 				dao.update(index, stu1);
-				man.display(dao.getAll());// ÏÔÊ¾ËùÒÔÊı¾İ
+				man.display(dao.getAll());// æ˜¾ç¤ºæ‰€ä»¥æ•°æ®
 			} else if (exe == 3) {
-				System.out.print("ÇëÊäÈëÄúÒªÉ¾³ıµÄÑ§Éú±àºÅ:");
+				System.out.print("è¯·è¾“å…¥æ‚¨è¦åˆ é™¤çš„å­¦ç”Ÿç¼–å·:");
 				int index = scan.nextInt();
-				// ½«É¾³ı¶ÔÓ¦Êı¾İ¿âµÄÑ§ÉúĞÅÏ¢
+				// å°†åˆ é™¤å¯¹åº”æ•°æ®åº“çš„å­¦ç”Ÿä¿¡æ¯
 				dao.delete(index);
-				man.display(dao.getAll());// ÏÔÊ¾ËùÒÔÊı¾İ
+				man.display(dao.getAll());// æ˜¾ç¤ºæ‰€ä»¥æ•°æ®
 			} else if (exe == 4) {
-				System.out.println("1.°´ÕÕ¿Î³ÌÒ»");
-				System.out.println("2.°´ÕÕ¿Î³Ì¶ş");
-				System.out.println("3.°´ÕÕ¿Î³ÌÈı");
-				System.out.println("4.°´ÕÕ×Ü·Ö");
-				System.out.println("5.·µ»ØÉÏ²ã");
-				System.out.print("ÇëÑ¡ÔñÅÅĞòÌõ¼ş(½µĞò)£º");
+				System.out.println("1.æŒ‰ç…§è¯¾ç¨‹ä¸€");
+				System.out.println("2.æŒ‰ç…§è¯¾ç¨‹äºŒ");
+				System.out.println("3.æŒ‰ç…§è¯¾ç¨‹ä¸‰");
+				System.out.println("4.æŒ‰ç…§æ€»åˆ†");
+				System.out.println("5.è¿”å›ä¸Šå±‚");
+				System.out.print("è¯·é€‰æ‹©æ’åºæ¡ä»¶(é™åº)ï¼š");
 				int check = scan.nextInt();
 				List<Student> stus = man.Desc(check);
 				if(stus!=null) {
@@ -63,7 +63,7 @@ public class StudentDaoTest {
 			} else if (exe == 5) {
 				System.exit(0);
 			} else {
-				System.out.println("²Ù×÷´íÎó");
+				System.out.println("æ“ä½œé”™è¯¯");
 			}
 		}
 
