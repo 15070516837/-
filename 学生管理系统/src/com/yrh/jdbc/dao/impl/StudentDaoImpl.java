@@ -13,7 +13,8 @@ import com.yrh.jdbc.domain.Student;
 import com.yrh.jdbc.util.JDBCUtil;
 
 public class StudentDaoImpl implements IStudentDao {
-
+	//asdaasdasda
+	
 	public void save(Student stu) {
 		Connection conn = JDBCUtil.getConn();
 		String sql = "insert into cj values(?,?,?,?)";
