@@ -3,9 +3,9 @@ package com.yrh.jdbc.util;
 import java.sql.*;
 
 public class JDBCUtil {
-	public static String url = "jdbc:sqlserver://localhost:1433;databaseName=Student";
+	public static String url = "jdbc:sqlserver://localhost:1433;databaseName=Student3";
 	public static String user = "sa";
-	public static String password = "yylm1066";
+	public static String password = "libin520";
 	
 	//¼ÓÔØÇý¶¯³ÌÐò
 	static {
